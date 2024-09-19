@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-.wrapper {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,6 @@ body {
     margin: 0;
 }
 
-
 .notification {
     display: flex;
     flex-direction: column;
@@ -21,12 +20,12 @@ body {
     align-items: center;
     text-align: center;
     padding: 15px;
-    width: 90%; 
-    max-width: 400px; 
+    width: 90%;
+    max-width: 400px;
 }
 
 .notification__image {
-    width: 250px; 
+    width: 250px;
     height: 250px;
     margin-bottom: 15px;
 }
@@ -40,7 +39,7 @@ body {
 }
 
 .notification__info {
-    font-size: 18px; 
+    font-size: 18px;
     color: #333;
     margin: 15px 0;
     line-height: 1.5;
@@ -57,20 +56,118 @@ body {
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 14px 20px; 
-    font-size: 18px; 
+    padding: 14px 20px;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
-    max-width: 250px; 
-    margin-top: 15px; 
+    max-width: 250px;
+    margin-top: 15px;
 }
 
 .notification__button:hover {
     background-color: #218838;
 }
 
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    border-bottom: 0.2px solid #B0B0B0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.header--scrolled {
+    background-color: #ffffff;
+}
+
+.header__menu-box {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 1rem;
+    gap: 0.1ch;
+}
+
+.header__samo-icon {
+    display: grid;
+    place-content: center;
+    gap: 0.2ch;
+}
+
+.header__divider {
+    border-left: 1px solid #666666;
+    height: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__logo-container {
+    position: relative;
+    width: 50px;
+    height: 40px;
+}
+
+.header__fire-ant-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background-color: #272343;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer__container {
+    padding: 0 1rem;
+}
+
+.footer__info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16x;
+}
+
+.footer__company-name {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.footer__contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__info-line {
+    display: flex;
+    font-size: 14px;
+}
+
+.footer__label {
+    flex-basis: 25%;
+}
+
+.footer__value {
+    flex-basis: 75%;
+}
+
 @media (min-width: 768px) {
+    .header__menu-box {
+        height: 60px;
+        padding: 0.5rem;
+    }
     .notification {
         padding: 20px;
         border-radius: 10px;
@@ -89,8 +186,20 @@ body {
 
     .notification__button {
         padding: 20px 32px;
-        max-width: 300px; 
+        max-width: 300px;
         font-size: 20px;
         font-weight: 500;
+    }
+
+    .footer__label {
+        flex-basis: 10%;
+    }
+
+    .footer__value {
+        flex-basis: 90%;
+    }
+
+    .header__divider {
+        height: 50%;
     }
 }
